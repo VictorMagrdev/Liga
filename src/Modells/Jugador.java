@@ -15,6 +15,8 @@ public class Jugador extends Persona {
         this.salario = salario;
     }
 
+
+
     public Equipo getMiequipo() {
         return miequipo;
     }
