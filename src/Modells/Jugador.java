@@ -5,13 +5,21 @@ public class Jugador extends Persona {
     private String posicion;
     private int goles;
     private int salario;
-
+    private Manager mimanager;
     public Jugador(String id, String cedula, String nombre, String apellido, int edad, String id1, String nacionalidad, String posicion, int goles, int salario) {
         super(id, cedula, nombre, apellido, edad);
         this.nacionalidad = nacionalidad;
         this.posicion = posicion;
         this.goles = goles;
         this.salario = salario;
+    }
+
+    public Manager getMimanager() {
+        return mimanager;
+    }
+
+    public void setMimanager(Manager mimanager) {
+        this.mimanager = mimanager;
     }
 
     public String getNacionalidad() {

@@ -8,12 +8,21 @@ public class Estadio {
     private String nombre;
     private int capacidad;
     private Liga miliga;
+    private Partido mipartido;
 
     public Estadio(String id, String ciudad, String nombre, int capacidad) {
         this.id = id;
         this.ciudad = ciudad;
         this.nombre = nombre;
         this.capacidad = capacidad;
+    }
+
+    public Partido getMipartido() {
+        return mipartido;
+    }
+
+    public void setMipartido(Partido mipartido) {
+        this.mipartido = mipartido;
     }
 
     public Liga getMiliga() {

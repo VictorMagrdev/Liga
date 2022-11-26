@@ -1,5 +1,7 @@
 package Modells;
 
+import java.util.LinkedList;
+
 public class Equipo {
     private String id;
     private String nombre;
@@ -10,6 +12,7 @@ public class Equipo {
     private int goles_contra;
     private int partidos;
     private Tecnico mitecnico;
+    private LinkedList<Partido> mipartido;
 
     public Equipo(String id, String nombre, int titulos_nacionales, int titulos_internacionales, int puntos, int goles_favor, int goles_contra, int partidos) {
         this.id = id;
@@ -20,6 +23,7 @@ public class Equipo {
         this.goles_favor = goles_favor;
         this.goles_contra = goles_contra;
         this.partidos = partidos;
+        this.mipartido = new LinkedList<>();
     }
 
     public void agregarTecnico(Tecnico nuevotecnico){
@@ -96,5 +100,13 @@ public class Equipo {
 
     public void setPartidos(int partidos) {
         this.partidos = partidos;
+    }
+
+    public LinkedList<Partido> getMipartido() {
+        return mipartido;
+    }
+
+    public void setMipartido(LinkedList<Partido> mipartido) {
+        this.mipartido = mipartido;
     }
 }
