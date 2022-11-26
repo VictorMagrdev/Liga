@@ -8,20 +8,21 @@ public class Estadio {
     private String nombre;
     private int capacidad;
     private Liga miliga;
-    private Partido mipartido;
+    private LinkedList<Partido> mipartido;
 
     public Estadio(String id, String ciudad, String nombre, int capacidad) {
         this.id = id;
         this.ciudad = ciudad;
         this.nombre = nombre;
         this.capacidad = capacidad;
+        this.mipartido = new LinkedList<>();
     }
 
-    public Partido getMipartido() {
+    public LinkedList<Partido> getMipartido() {
         return mipartido;
     }
 
-    public void setMipartido(Partido mipartido) {
+    public void setMipartido(LinkedList<Partido> mipartido) {
         this.mipartido = mipartido;
     }
 

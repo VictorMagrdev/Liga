@@ -12,7 +12,10 @@ public class Equipo {
     private int goles_contra;
     private int partidos;
     private Tecnico mitecnico;
+    private LinkedList<Jugador> mijugador;
     private LinkedList<Partido> mipartido;
+    private LinkedList<Aficionado> miaficionado;
+    private Manager mimanager;
 
     public Equipo(String id, String nombre, int titulos_nacionales, int titulos_internacionales, int puntos, int goles_favor, int goles_contra, int partidos) {
         this.id = id;
@@ -24,6 +27,38 @@ public class Equipo {
         this.goles_contra = goles_contra;
         this.partidos = partidos;
         this.mipartido = new LinkedList<>();
+        this.miaficionado= new LinkedList<>();
+        this.mijugador = new LinkedList<>();
+    }
+    public void agregarjugador(Jugador nuevojugador){
+        this.mijugador.add(nuevojugador);
+    }
+    public void agregartecnico(Tecnico nuevotecnico){
+        this.setMitecnico(nuevotecnico);
+    }
+
+    public LinkedList<Jugador> getMijugador() {
+        return mijugador;
+    }
+
+    public void setMijugador(LinkedList<Jugador> mijugador) {
+        this.mijugador = mijugador;
+    }
+
+    public Manager getMimanager() {
+        return mimanager;
+    }
+
+    public void setMimanager(Manager mimanager) {
+        this.mimanager = mimanager;
+    }
+
+    public LinkedList<Aficionado> getMiaficionado() {
+        return miaficionado;
+    }
+
+    public void setMiaficionado(LinkedList<Aficionado> miaficionado) {
+        this.miaficionado = miaficionado;
     }
 
     public void agregarTecnico(Tecnico nuevotecnico){

@@ -8,20 +8,27 @@ public class Partido {
     private int goles_visitante;
     private Arbitro miarbitro;
     private Jornada mijornada;
-    private LinkedList<Estadio> miestadio;
+    private Estadio miestadio;
+    private Equipo miequipo;
     public Partido(String id, int goles_local, int goles_visitante) {
         this.id = id;
         this.goles_local = goles_local;
         this.goles_visitante = goles_visitante;
-        this.miestadio = new LinkedList<>();
     }
 
+    public Equipo getMiequipo() {
+        return miequipo;
+    }
 
-    public LinkedList<Estadio> getMiestadio() {
+    public void setMiequipo(Equipo miequipo) {
+        this.miequipo = miequipo;
+    }
+
+    public Estadio getMiestadio() {
         return miestadio;
     }
 
-    public void setMiestadio(LinkedList<Estadio> miestadio) {
+    public void setMiestadio(Estadio miestadio) {
         this.miestadio = miestadio;
     }
 
