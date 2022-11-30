@@ -17,6 +17,7 @@ public class Equipo {
     private LinkedList<Aficionado> miaficionado;
     private Manager mimanager;
 
+    //constructor
     public Equipo(String id, String nombre, int titulos_nacionales, int titulos_internacionales, int puntos, int goles_favor, int goles_contra, int partidos) {
         this.id = id;
         this.nombre = nombre;
@@ -30,6 +31,7 @@ public class Equipo {
         this.miaficionado= new LinkedList<>();
         this.mijugador = new LinkedList<>();
     }
+    //gets/sets
     public void agregarjugador(Jugador nuevojugador){
         this.mijugador.add(nuevojugador);
     }
@@ -143,5 +145,38 @@ public class Equipo {
 
     public void setMipartido(LinkedList<Partido> mipartido) {
         this.mipartido = mipartido;
+    }
+
+    //metodos
+    public Jugador jugadormasjoven_equipo(){
+        Jugador respuesta = null;
+        int menor= Integer.MAX_VALUE;
+        for (Jugador actual: this.mijugador){
+            if (actual instanceof Jugador) {
+                if (actual.getEdad() < menor) {
+                    respuesta = actual;
+                }
+            }
+        }
+        return respuesta;
+    }
+    public double promedio_edad(){
+        double respuesta = 0;
+        double edad = 0.0;
+        for(Jugador actual: this.mijugador){
+            edad += actual.getEdad();
+        }
+        respuesta = edad / this.mijugador.size();
+        return respuesta;
+    }
+    public Jugador jugador_masgoles_equipo(){
+        int mayor = Integer.MIN_VALUE;
+        Jugador respuesta = null;
+        for (Jugador actual: this.mijugador){
+            if (actual.getGoles()> mayor){
+                respuesta = actual;
+            }
+        }
+        return respuesta;
     }
 }

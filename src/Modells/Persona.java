@@ -6,13 +6,21 @@ public abstract class Persona {
     private String nombre;
     private String apellido;
     private int edad;
-
+    private Liga miliga;
     public Persona(String id, String cedula, String nombre, String apellido, int edad) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+    }
+
+    public Liga getMiliga() {
+        return miliga;
+    }
+
+    public void setMiliga(Liga miliga) {
+        this.miliga = miliga;
     }
 
     public String getId() {
