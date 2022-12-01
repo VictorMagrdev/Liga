@@ -179,4 +179,18 @@ public class Equipo {
         }
         return respuesta;
     }
+
+    public Jugador buscarJugador(String cedula) {
+        Jugador respuesta = null;
+        for (Jugador actual: this.mijugador){
+            if (actual.getCedula().equals(cedula)){
+                respuesta = actual;
+            }
+        }
+        return respuesta;
+    }
+
+    public void eliminarjugador(Jugador encontrado) {
+        this.mijugador.remove(encontrado);
+    }
 }

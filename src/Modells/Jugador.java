@@ -7,8 +7,8 @@ public class Jugador extends Persona {
     private int salario;
     private Manager mimanager;
     private Equipo miequipo;
-    public Jugador(String id, String cedula, String nombre, String apellido, int edad, String id1, String nacionalidad, String posicion, int goles, int salario) {
-        super(id, cedula, nombre, apellido, edad);
+    public Jugador(String cedula, String nombre, String apellido, int edad, String nacionalidad, String posicion, int goles, int salario) {
+        super(cedula, nombre, apellido, edad);
         this.nacionalidad = nacionalidad;
         this.posicion = posicion;
         this.goles = goles;

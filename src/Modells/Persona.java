@@ -1,14 +1,12 @@
 package Modells;
 
 public abstract class Persona {
-    private String id;
     private String cedula;
     private String nombre;
     private String apellido;
     private int edad;
     private Liga miliga;
-    public Persona(String id, String cedula, String nombre, String apellido, int edad) {
-        this.id = id;
+    public Persona(String cedula, String nombre, String apellido, int edad) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,14 +19,6 @@ public abstract class Persona {
 
     public void setMiliga(Liga miliga) {
         this.miliga = miliga;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getCedula() {
