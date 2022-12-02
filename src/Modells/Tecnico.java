@@ -4,8 +4,8 @@ public class Tecnico extends Persona{
     private int años_expereincia;
     private int salario;
 
-    public Tecnico(String id, String cedula, String nombre, String apellido, int edad, int años_expereincia, int salario) {
-        super(id, cedula, nombre, apellido, edad);
+    public Tecnico(String cedula, String nombre, String apellido, int edad, int años_expereincia, int salario) {
+        super(cedula, nombre, apellido, edad);
         this.años_expereincia = años_expereincia;
         this.salario = salario;
     }

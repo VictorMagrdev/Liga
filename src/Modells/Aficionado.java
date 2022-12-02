@@ -5,8 +5,8 @@ public class Aficionado extends Persona{
     private boolean abonados;
     private Equipo miequipo;
 
-    public Aficionado(String id, String cedula, String nombre, String apellido, int edad, String id1, int años_fedelidad, boolean abonados) {
-        super(id, cedula, nombre, apellido, edad);
+    public Aficionado(String cedula, String nombre, String apellido, int edad, int años_fedelidad, boolean abonados) {
+        super(cedula, nombre, apellido, edad);
         this.años_fedelidad = años_fedelidad;
         this.abonados = abonados;
     }

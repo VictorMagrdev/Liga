@@ -14,7 +14,6 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
     }
 
-    @SuppressWarnings("unchecked")
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -733,65 +732,21 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private void btnCrearPersonaActionPerformed(java.awt.event.ActionEvent evt) {
-        String cedula = this.txtCedulaPersona.getText();
-        String nombre = this.txtNombrePersona.getText();
-        String telefono = this.txtTelefonoPersona.getText();
-        int añosExperiencia = Integer.parseInt(this.txtExperienciaTecnico.getText());
-        String especialidad = this.txtEspecialidadTecnico.getText();
-        this.miTaller.crearTecnico(cedula,
-                nombre,
-                telefono,
-                especialidad,
-                añosExperiencia);
-        JOptionPane.showMessageDialog(this, "Técnico Creado");
-        limpiarCajas();
+
     }
 
     private void btnBuscarPersonaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        String cedula = this.txtCedulaPersona.getText();
-        Tecnico encontrado = this.miTaller.buscarTecnico(cedula);
-        if (encontrado == null) {
-            JOptionPane.showMessageDialog(this, "No existe");
-        } else {
-            this.txtNombrePersona.setText(encontrado.getNombre());
-            this.txtTelefonoPersona.setText(encontrado.getTelefono());
-            this.txtEspecialidadTecnico.setText(encontrado.getEspecializacion());
-            this.txtExperienciaTecnico.setText("" + encontrado.getAñosExperiencia());
-        }
+
     }
 
     private void btnEditarPersonaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        String cedula = this.txtCedulaPersona.getText();
-        Tecnico encontrado = this.miTaller.buscarTecnico(cedula);
-        if (encontrado == null) {
-            JOptionPane.showMessageDialog(this, "No existe");
-        } else {
-            String nombre = this.txtNombrePersona.getText();
-            String telefono = this.txtTelefonoPersona.getText();
-            int añosExperiencia = Integer.parseInt(this.txtExperienciaTecnico.getText());
-            String especialidad = this.txtEspecialidadTecnico.getText();
-            encontrado.setNombre(nombre);
-            encontrado.setTelefono(telefono);
-            encontrado.setAñosExperiencia(añosExperiencia);
-            encontrado.setEspecializacion(especialidad);
-            JOptionPane.showMessageDialog(this, "Actualizado");
-            limpiarCajas();
-        }
     }
 
     private void btnEliminarPersonaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        String cedula=this.txtCedulaPersona.getText();
-        Tecnico encontrado=this.miTaller.buscarTecnico(cedula);
-        if (encontrado==null) {
-            JOptionPane.showMessageDialog(this, "No existe");
-        }else{
-            this.miTaller.eliminarTecnico(encontrado);
-            JOptionPane.showMessageDialog(this, "Eliminado");
-            limpiarCajas();
-        }
+
     }
 
     private void cbCubiculosTecnicoActionPerformed(java.awt.event.ActionEvent evt) {

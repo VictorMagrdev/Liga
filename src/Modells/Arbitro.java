@@ -6,8 +6,8 @@ public class Arbitro extends Persona{
     private boolean FIFA;
     private Partido mipartido;
 
-    public Arbitro(String id, String cedula, String nombre, String apellido, int edad, int años_experiencia, int salario, boolean FIFA) {
-        super(id, cedula, nombre, apellido, edad);
+    public Arbitro(String cedula, String nombre, String apellido, int edad, int años_experiencia, int salario, boolean FIFA) {
+        super( cedula, nombre, apellido, edad);
         this.años_experiencia = años_experiencia;
         this.salario = salario;
         this.FIFA = FIFA;

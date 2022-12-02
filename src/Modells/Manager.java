@@ -7,8 +7,8 @@ public class Manager extends Persona{
     private LinkedList<Jugador> mijugador;
     private Equipo miequipo;
 
-    public Manager(String id, String cedula, String nombre, String apellido, int edad, int años_afilicion) {
-        super(id, cedula, nombre, apellido, edad);
+    public Manager(String cedula, String nombre, String apellido, int edad, int años_afilicion) {
+        super(cedula, nombre, apellido, edad);
         this.años_afilicion = años_afilicion;
         this.mijugador = new LinkedList<>();
     }
